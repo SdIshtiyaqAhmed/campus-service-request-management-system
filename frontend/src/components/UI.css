@@ -1,0 +1,149 @@
+﻿/* =========================================================
+   SHARED BUTTON SYSTEM
+   ========================================================= */
+
+.button,
+.primary-button,
+.secondary-button,
+.danger-button,
+.button-primary,
+.button-secondary,
+.button-danger {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 7px;
+    min-height: 40px;
+    padding: 9px 15px;
+    border: 1px solid transparent;
+    border-radius: var(--radius-sm, 6px);
+    font-family: inherit;
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.2;
+    text-decoration: none;
+    cursor: pointer;
+    transition:
+        background-color 0.15s ease,
+        border-color 0.15s ease,
+        color 0.15s ease,
+        box-shadow 0.15s ease;
+    box-sizing: border-box;
+}
+
+.button:disabled,
+.primary-button:disabled,
+.secondary-button:disabled,
+.danger-button:disabled,
+.button-primary:disabled,
+.button-secondary:disabled,
+.button-danger:disabled {
+    opacity: 0.55;
+    cursor: not-allowed;
+}
+
+/* Primary */
+.button-primary,
+.primary-button {
+    background: var(--primary, #2563eb);
+    border-color: var(--primary, #2563eb);
+    color: #ffffff;
+}
+
+.button-primary:hover:not(:disabled),
+.primary-button:hover:not(:disabled) {
+    background: var(--primary-hover, #1d4ed8);
+    border-color: var(--primary-hover, #1d4ed8);
+}
+
+/* Secondary */
+.button-secondary,
+.secondary-button {
+    background: var(--primary-light, #eff6ff);
+    border-color: var(--primary, #2563eb);
+    color: var(--primary, #2563eb);
+}
+
+.button-secondary:hover:not(:disabled),
+.secondary-button:hover:not(:disabled) {
+    background: #dbeafe;
+    border-color: var(--primary-hover, #1d4ed8);
+    color: var(--primary-hover, #1d4ed8);
+}
+
+/* Danger */
+.button-danger,
+.danger-button {
+    background: var(--danger, #dc2626);
+    border-color: var(--danger, #dc2626);
+    color: #ffffff;
+}
+
+.button-danger:hover:not(:disabled),
+.danger-button:hover:not(:disabled) {
+    background: #b91c1c;
+    border-color: #b91c1c;
+}
+
+/* Focus */
+.button:focus-visible,
+.primary-button:focus-visible,
+.secondary-button:focus-visible,
+.danger-button:focus-visible,
+.button-primary:focus-visible,
+.button-secondary:focus-visible,
+.button-danger:focus-visible {
+    outline: 2px solid var(--primary, #2563eb);
+    outline-offset: 2px;
+}
+
+
+/* =========================================================
+   SHARED STATISTICS CARDS
+   ========================================================= */
+
+.stats-grid {
+    display: grid;
+    gap: 14px;
+    width: 100%;
+    min-width: 0;
+}
+
+.stat-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    width: 100%;
+    min-width: 0;
+    min-height: 104px;
+    padding: 18px;
+    box-sizing: border-box;
+
+    background: var(--surface, #ffffff);
+    border: 1px solid var(--border, #dbe3ee);
+    border-radius: var(--radius-md, 10px);
+    box-shadow: var(--shadow-sm, 0 1px 3px rgba(15, 23, 42, 0.08));
+}
+
+.stat-label {
+    margin: 0 0 8px;
+    color: var(--text-secondary, #536078);
+    font-size: 13px;
+    font-weight: 600;
+    line-height: 1.3;
+}
+
+.stat-value {
+    margin: 0;
+    color: var(--text, #172033);
+    font-size: 28px;
+    font-weight: 700;
+    line-height: 1.1;
+}
+
+.stat-description {
+    margin: 5px 0 0;
+    color: var(--text-muted, #6b7280);
+    font-size: 12px;
+    line-height: 1.4;
+}

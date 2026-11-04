@@ -1,0 +1,341 @@
+.admin-requests-page {
+    max-width: 1500px;
+}
+
+.admin-request-stat {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    padding: 18px 20px;
+    box-shadow: var(--shadow-sm);
+}
+
+.admin-request-stat-label {
+    display: block;
+    color: var(--text-secondary);
+    font-size: 13px;
+    margin-bottom: 8px;
+}
+
+.admin-request-stat strong {
+    display: block;
+    color: var(--text);
+    font-size: 26px;
+    line-height: 1.1;
+}
+
+.admin-requests-toolbar {
+    display: grid;
+    grid-template-columns: minmax(240px, 2fr) repeat(3, minmax(150px, 1fr)) auto;
+    gap: 14px;
+    align-items: end;
+    margin: 24px 0 12px;
+    padding: 18px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.search-field,
+.filter-field {
+    display: flex;
+    flex-direction: column;
+    gap: 7px;
+}
+
+.search-field label,
+.filter-field label {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.search-field input,
+.filter-field select,
+.assign-select {
+    width: 100%;
+    min-height: 40px;
+    padding: 8px 11px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+}
+
+.search-field input:focus,
+.filter-field select:focus,
+.assign-select:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.filter-clear-button {
+    min-height: 40px;
+    white-space: nowrap;
+}
+
+.results-summary {
+    display: flex;
+    justify-content: flex-end;
+    margin: 14px 2px;
+    color: var(--text-secondary);
+    font-size: 13px;
+}
+
+.table-card {
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+    overflow: hidden;
+}
+
+.table-wrapper {
+    overflow-x: auto;
+}
+
+.data-table {
+    width: 100%;
+    min-width: 1100px;
+    border-collapse: collapse;
+}
+
+.data-table th {
+    padding: 13px 16px;
+    background: var(--surface-muted);
+    border-bottom: 1px solid var(--border);
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 700;
+    text-align: left;
+    white-space: nowrap;
+}
+
+.data-table td {
+    padding: 15px 16px;
+    border-bottom: 1px solid var(--border);
+    color: var(--text);
+    font-size: 13px;
+    vertical-align: middle;
+}
+
+.data-table tbody tr:last-child td {
+    border-bottom: 0;
+}
+
+.data-table tbody tr:hover {
+    background: var(--surface-muted);
+}
+
+.request-title-link {
+    display: block;
+    max-width: 250px;
+    color: var(--text);
+    font-weight: 650;
+    text-decoration: none;
+}
+
+.request-title-link:hover {
+    color: var(--primary);
+}
+
+.request-location {
+    display: block;
+    margin-top: 4px;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.person-cell {
+    display: flex;
+    flex-direction: column;
+    gap: 3px;
+    min-width: 160px;
+}
+
+.person-cell strong {
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.person-cell span {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.assigned-person {
+    display: block;
+    min-width: 120px;
+    color: var(--text-secondary);
+}
+
+.assign-select {
+    min-width: 170px;
+    font-size: 12px;
+}
+
+.table-action-link {
+    color: var(--primary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+    white-space: nowrap;
+}
+
+.table-action-link:hover {
+    text-decoration: underline;
+}
+
+.empty-state,
+.loading-state {
+    padding: 60px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+.empty-state p {
+    margin: 0 0 20px;
+    color: var(--text-secondary);
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+}
+
+.alert-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+@media (max-width: 1100px) {
+    .admin-requests-toolbar {
+        grid-template-columns: repeat(2, minmax(180px, 1fr));
+    }
+
+    .search-field {
+        grid-column: 1 / -1;
+    }
+
+    .filter-clear-button {
+        width: fit-content;
+    }
+}
+
+@media (max-width: 640px) {
+    .admin-requests-toolbar {
+        grid-template-columns: 1fr;
+    }
+
+    .search-field {
+        grid-column: auto;
+    }
+
+    .filter-clear-button {
+        width: 100%;
+    }
+
+    .results-summary {
+        justify-content: flex-start;
+    }
+}
+
+.admin-requests-page .stats-grid {
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    margin-bottom: 20px;
+}
+
+.admin-request-stat {
+    min-width: 0;
+}
+
+@media (max-width: 1000px) {
+    .admin-requests-page .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-requests-page .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+
+/* Final admin request statistics layout */
+.admin-requests-page .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(5, minmax(0, 1fr));
+    gap: 14px;
+    width: 100%;
+    margin-bottom: 20px;
+}
+
+.admin-requests-page .admin-request-stat {
+    width: 100%;
+    min-width: 0;
+    box-sizing: border-box;
+}
+
+@media (max-width: 1000px) {
+    .admin-requests-page .stats-grid {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 600px) {
+    .admin-requests-page .stats-grid {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (max-width: 420px) {
+    .admin-requests-page .stats-grid {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Assignment controls */
+.assignment-cell {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+    min-width: 250px;
+}
+
+.assignment-cell .assign-select {
+    flex: 1;
+    min-width: 0;
+}
+
+.assignment-action-button {
+    flex-shrink: 0;
+    min-height: 36px;
+    padding: 8px 11px;
+    font-size: 12px;
+}
+
+@media (max-width: 700px) {
+    .assignment-cell {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .assignment-cell .assign-select,
+    .assignment-action-button {
+        width: 100%;
+    }
+}

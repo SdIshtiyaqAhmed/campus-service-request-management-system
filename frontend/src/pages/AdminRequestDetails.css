@@ -1,0 +1,463 @@
+.admin-request-details-page {
+    max-width: 1400px;
+}
+
+.back-link-wrapper {
+    margin: -10px 0 18px;
+}
+
+.back-link {
+    color: var(--text-secondary);
+    font-size: 13px;
+    font-weight: 600;
+    text-decoration: none;
+}
+
+.back-link:hover {
+    color: var(--primary);
+}
+
+.request-details-grid {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 340px;
+    gap: 20px;
+    align-items: start;
+}
+
+.request-main-column,
+.request-side-column {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.details-card {
+    padding: 22px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    box-shadow: var(--shadow-sm);
+}
+
+.request-heading {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+    align-items: flex-start;
+}
+
+.request-id {
+    display: block;
+    margin-bottom: 7px;
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.04em;
+    text-transform: uppercase;
+}
+
+.request-heading h2 {
+    margin: 0;
+    color: var(--text);
+    font-size: 24px;
+    line-height: 1.3;
+}
+
+.request-badges {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+    justify-content: flex-end;
+}
+
+.details-divider {
+    height: 1px;
+    margin: 20px 0;
+    background: var(--border);
+}
+
+.detail-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 18px;
+}
+
+.detail-item {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+
+.detail-item span {
+    color: var(--text-muted);
+    font-size: 11px;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.03em;
+}
+
+.detail-item strong {
+    color: var(--text);
+    font-size: 13px;
+    font-weight: 600;
+}
+
+.section-heading {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 16px;
+}
+
+.section-heading h3 {
+    margin: 0;
+    color: var(--text);
+    font-size: 16px;
+}
+
+.section-heading span {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.request-description,
+.resolution-card p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 14px;
+    line-height: 1.7;
+    white-space: pre-wrap;
+}
+
+.resolution-card {
+    border-left: 3px solid var(--success);
+}
+
+.timeline {
+    display: flex;
+    flex-direction: column;
+}
+
+.timeline-item {
+    position: relative;
+    display: flex;
+    gap: 12px;
+    min-height: 65px;
+}
+
+.timeline-item:not(:last-child)::after {
+    content: '';
+    position: absolute;
+    top: 25px;
+    bottom: 0;
+    left: 11px;
+    width: 1px;
+    background: var(--border);
+}
+
+.timeline-marker {
+    position: relative;
+    z-index: 1;
+    display: flex;
+    flex: 0 0 23px;
+    width: 23px;
+    height: 23px;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid var(--success);
+    border-radius: 50%;
+    background: var(--surface);
+    color: var(--success);
+    font-size: 11px;
+    font-weight: 700;
+}
+
+.timeline-item > div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.timeline-item strong {
+    color: var(--text);
+    font-size: 13px;
+}
+
+.timeline-item span:not(.timeline-marker) {
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.profile-card {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.profile-avatar {
+    display: flex;
+    flex: 0 0 42px;
+    width: 42px;
+    height: 42px;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50%;
+    background: var(--primary-light);
+    color: var(--primary);
+    font-size: 16px;
+    font-weight: 700;
+}
+
+.profile-card > div:last-child {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    min-width: 0;
+}
+
+.profile-card strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.profile-card span {
+    overflow-wrap: anywhere;
+    color: var(--text-muted);
+    font-size: 12px;
+}
+
+.current-assignment {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+    margin-bottom: 18px;
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+}
+
+.current-assignment span {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.current-assignment strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.current-assignment small {
+    color: var(--text-secondary);
+    font-size: 11px;
+}
+
+.assignment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 9px;
+}
+
+.assignment-form label,
+.comment-form label {
+    color: var(--text-secondary);
+    font-size: 12px;
+    font-weight: 600;
+}
+
+.assignment-form select,
+.comment-form textarea {
+    width: 100%;
+    padding: 10px 11px;
+    border: 1px solid var(--border-strong);
+    border-radius: var(--radius-md);
+    background: var(--surface);
+    color: var(--text);
+    font: inherit;
+    outline: none;
+}
+
+.assignment-form select:focus,
+.comment-form textarea:focus {
+    border-color: var(--primary);
+    box-shadow: 0 0 0 3px var(--primary-light);
+}
+
+.assignment-form .button {
+    width: 100%;
+    margin-top: 4px;
+}
+
+.assignment-note {
+    margin: 0;
+    color: var(--text-muted);
+    font-size: 12px;
+    line-height: 1.5;
+}
+
+.comments-list {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    margin-bottom: 20px;
+}
+
+.comment-item {
+    padding: 13px;
+    border: 1px solid var(--border);
+    border-radius: var(--radius-md);
+    background: var(--surface-muted);
+}
+
+.comment-header {
+    display: flex;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 7px;
+}
+
+.comment-header strong {
+    color: var(--text);
+    font-size: 12px;
+}
+
+.comment-header span {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.comment-item p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.55;
+    white-space: pre-wrap;
+}
+
+.empty-comments {
+    margin: 0 0 18px;
+    color: var(--text-muted);
+    font-size: 13px;
+}
+
+.comment-form {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    padding-top: 18px;
+    border-top: 1px solid var(--border);
+}
+
+.comment-form textarea {
+    resize: vertical;
+    min-height: 90px;
+}
+
+.comment-form-footer {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 12px;
+}
+
+.comment-form-footer span {
+    color: var(--text-muted);
+    font-size: 11px;
+}
+
+.feedback-summary {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+.feedback-summary strong {
+    color: var(--text);
+    font-size: 14px;
+}
+
+.feedback-summary p {
+    margin: 0;
+    color: var(--text-secondary);
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+.alert {
+    margin-bottom: 18px;
+    padding: 12px 14px;
+    border-radius: var(--radius-md);
+    font-size: 13px;
+}
+
+.alert-error {
+    background: #fef2f2;
+    border: 1px solid #fecaca;
+    color: #991b1b;
+}
+
+.empty-state,
+.loading-state {
+    padding: 60px 24px;
+    background: var(--surface);
+    border: 1px solid var(--border);
+    border-radius: var(--radius-lg);
+    text-align: center;
+}
+
+.empty-state h3 {
+    margin: 0 0 8px;
+    color: var(--text);
+}
+
+.empty-state p {
+    margin: 0 0 20px;
+    color: var(--text-secondary);
+}
+
+@media (max-width: 900px) {
+    .request-details-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .request-side-column {
+        order: -1;
+    }
+}
+
+@media (max-width: 640px) {
+    .details-card {
+        padding: 17px;
+    }
+
+    .request-heading {
+        flex-direction: column;
+    }
+
+    .request-badges {
+        justify-content: flex-start;
+    }
+
+    .request-heading h2 {
+        font-size: 20px;
+    }
+
+    .detail-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .comment-header {
+        flex-direction: column;
+        gap: 3px;
+    }
+
+    .comment-form-footer {
+        align-items: stretch;
+        flex-direction: column;
+    }
+
+    .comment-form-footer .button {
+        width: 100%;
+    }
+}
