@@ -2,14 +2,12 @@
 
 A web-based platform for managing campus service requests, built with React, Node.js, Express, and MongoDB. The project demonstrates containerization, automated CI/CD, container image publishing, and Kubernetes orchestration.
 
-<p align="center">
-  <img src="https://img.shields.io/badge/React-19-blue?logo=react" alt="React 19" />
-  <img src="https://img.shields.io/badge/Node.js-22-green?logo=node.js" alt="Node.js 22" />
-  <img src="https://img.shields.io/badge/MongoDB-8-green?logo=mongodb" alt="MongoDB 8" />
-  <img src="https://img.shields.io/badge/Docker-Enabled-blue?logo=docker" alt="Docker" />
-  <img src="https://img.shields.io/badge/Kubernetes-Enabled-blue?logo=kubernetes" alt="Kubernetes" />
-  <img src="https://img.shields.io/badge/CI%2FCD-GitHub%20Actions-black?logo=githubactions" alt="GitHub Actions" />
-</p>
+![React](https://img.shields.io/badge/React-19-61DAFB?logo=react&logoColor=white)
+![Node.js](https://img.shields.io/badge/Node.js-22-339933?logo=node.js&logoColor=white)
+![MongoDB](https://img.shields.io/badge/MongoDB-8-47A248?logo=mongodb&logoColor=white)
+![Docker](https://img.shields.io/badge/Docker-Enabled-2496ED?logo=docker&logoColor=white)
+![Kubernetes](https://img.shields.io/badge/Kubernetes-Enabled-326CE5?logo=kubernetes&logoColor=white)
+![GitHub Actions](https://img.shields.io/badge/GitHub_Actions-CI%2FCD-2088FF?logo=githubactions&logoColor=white)
 
 ---
 
