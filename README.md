@@ -627,19 +627,6 @@ kubectl delete namespace campus
 
 ---
 
-## Author
-
-**Syed Ishtiyaq Ahmed**
-
-M.Tech – Computer Science and Engineering  
-SR University
-
-**GitHub:** [SdIshtiyaqAhmed](https://github.com/SdIshtiyaqAhmed)
-
-**Project Repository:** [Campus Service Request Management System](https://github.com/SdIshtiyaqAhmed/campus-service-request-management-system)
-
----
-
 ## License
 
 This project is developed for academic and educational purposes.
